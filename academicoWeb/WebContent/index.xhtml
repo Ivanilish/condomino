@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head>
+	<f:facet name="first">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+		<title>Manejo de Datos Estudiantiles</title>
+	</f:facet>
+</h:head> 
+<body> 
+	<p:panel header="Datos Estudiantiles"></p:panel>
+	<p:dataTable value="#{beanEstudiante.listaEstudiantes}" var="estudiante">
+		<p:column headerText="CEDULA">
+			<h:outputText value="#{estudiante.cedula}" />
+		</p:column>
+		<p:column headerText="NOMBRE">
+			<h:outputText value="#{estudiante.nombre}" />
+		</p:column>
+		<p:column headerText="APELLIDO">
+			<h:outputText value="#{estudiante.apellido}" />
+		</p:column>
+		<p:column headerText="EDAD">
+			<h:outputText value="#{estudiante.edad}" />
+		</p:column>
+	</p:dataTable>
+</body> 
+</html>
